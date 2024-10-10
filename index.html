@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+    body {
+        background-image: url("Dark_Blue_Bg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    p {
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .body_card {
+        backdrop-filter: blur(10px);
+        width: 90vw;
+        background-color: rgba(26, 25, 64, 0.75);
+        min-height: 100%;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .body_card:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .me {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+
+    .game {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-top: 10px;
+
+    }
+
+    .coding {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    .heading-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+    }
+
+    .my_name {
+        padding-left: 10px;
+    }
+
+    .my_pic {
+        border-radius: 10%;
+        border: 5px solid;
+    }
+
+    .hollow_pic {
+        filter: grayscale(100%);
+        margin-left:8px;
+        border-radius: 10%;
+        border: 5px solid;
+        border-color:#1B1A30;
+        opacity:0.75;
+        box-shadow: 0 0 2vw rgba(0, 0, 0, 0);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .hollow_pic:hover {
+        transform: translateY(-3px);
+        filter: grayscale(0%);
+        opacity:1;
+        box-shadow: 0 0 2vw rgba(0, 0, 0, 1);
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .python_logo {
+        filter: sepia(100%);
+        margin-right:8px;
+        border-radius: 10%;
+        border: 5px solid;
+        border-color:#1B1A55;
+        opacity:0.75;
+        box-shadow: 0 0 2vw rgba(0, 0, 0, 0);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .python_logo:hover {
+        transform: translateY(3px);
+        filter: sepia(0%);
+        opacity:1;
+        box-shadow: 0 0 2vw rgba(0, 0, 0, 1);
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    h2 {
+        color: #C8ACD6;
+        margin-left: 10px;
+        font-family: "Playfair Display SC", serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        letter-spacing: 1.5px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    h1 {
+        background: linear-gradient(to right, #6EACDA, #C8ACD6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        color: #6EACDA;
+        font-family: "Maven Pro", sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        transition: color 0.3s ease-in-out;
+    }
+
+    h2:hover {
+        color:#bb57e6;
+    }
+
+    p {
+        font-weight:900;
+        color:#E2E2B6;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    table {
+        width: 70vw;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: rgba(26, 25, 64, 0.9);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    }
+
+    th, td {
+        padding: 15px 20px;
+        text-align: center;
+        font-family: "Merriweather", serif;
+        font-size: 20px;
+        color: #E2E2B6;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    th {
+        background-color: rgba(110, 172, 218, 0.9);
+        font-family: "Playfair Display SC", serif;
+        font-size: 22px;
+        color: #1A1940;
+    }
+
+    td {
+        background-color: rgba(26, 25, 64, 0.7);
+    }
+
+    td:hover {
+        background-color: rgba(0, 0, 154, 0.7);
+    }
+
+    .programming_table {
+        padding-top:20px;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+    }
+    a {
+        color:#4982bf;
+        transition: color 0.2s ease-in-out;
+    }
+    a:hover {
+        color:#64a4e8;
+        transition: color 0.2s ease-in-out;
+    }
+    .mail_me {
+        padding: 10px 20px;
+        background-color: #6EACDA;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .mail_me:hover {
+        background-color: #C8ACD6;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #1A1940;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #6EACDA;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #C8ACD6;
+    }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="body_card">
+            <div class="me">
+                <img class="my_pic" src="pic of me.jpg" height="350px" width="auto" alt="A really weird pic of me">
+                <div class="heading-container">
+                    <h1 class="my_name">Hello, I'm Mashroor Ahmed</h1>
+                    <h2>About Me</h2>
+                    <p>My name is Mashroor Ahmed. I read in a really big school (52 acres) named Dhaka Residential Model College (DRMC). I am in Class seven, English version. I like to play video games, do drawing, code(while listening to songs) and watch anime. I also read books sometimes. I don't really play video games much now, sometimes geometry dash. I used to play a lot of metroidvania games like Hollow Knight. I have watched some animes like Tokyo Ghoul, Attack on Titan, Hunter X Hunter etc. I like some songs like Im Numb, Judas, Metamorphosis etc(favourite Judas). I really like coding(kinda don't like HTML tho). Looking forward to Javascript. My favourite colors are green, red and black. My favourite food is pizza, and that's about it for my introduction. </p>
+                </div>
+            </div>
+
+            <h2>Gaming Achievements</h2>
+            <div class="game">
+                <p>Although I don't play that much now, I used to play a lot of metroidvanias as mentioned before. A Metroidvania is a subgenre of action-adventure platformer video games that combines elements of role-playing games (RPGs) with platforming gameplay. I have completed a lot of them like <a href="https://en.wikipedia.org/wiki/Hollow_Knight#:~:text=Hollow%20Knight%20was%20well%20received,combat%20and%20level%20of%20difficulty." target="_blank">Hollow Knight</a>, Lone Fungus, <a href="https://en.wikipedia.org/wiki/Ori_and_the_Blind_Forest" target="_blank">Ori and The Blind forest</a>  and <a href="https://en.wikipedia.org/wiki/Dead_Cells" target="_blank">Dead cells</a>(Not really metroidvania). I really love Hollow Knight. I have a total of 107% progress in it (max is 112% which only 15% of all players have) and more 72 hours in my main save file(which I don't have anymore since I had to reset my laptop after it ran into a problem ToT). I completed 100% lone fungus, since I didn't play it much I didn't get the extra things. I currently play Geometry Dash, which is not close to a metroidvania. I have completed all the main levels except the three demon difficulty ones and am exploring the online levels now and really enjoying them. I also got a bit into level creating in Geometry Dash. </p>
+                <img class="hollow_pic" src="Hollow_Knight.JPG.jpg" alt="The Best Game In The World" height="200px" width="auto">
+            </div>
+
+            <h2>Coding Things</h2>
+            <div class="coding">
+                <img class="python_logo" src="python.png" height="200px" width="auto">
+                <p>As stated before, I like coding in my free time. I don't really have much ideas so I mostly do my coding homeworks (like rn). I have finished my Python course and just finished HTML with CSS. I like Python but don't really like HTML. I have done some Javascript before and I like it a bit, except the thing that semicolon is needed in every line is kinda annoying. One thing I'm really bad at is making discord bots, which I don't even remember even a little how to do since my brain was frying along with my laptop (cuz its potato and can't handle opening discord and a tab with pycharm). I've made some games in Python which I now don't have a single one due to my laptop resetting all data. Here's a short table: </p>
+            </div>
+            <div class="programming_table">
+                <table>
+                    <tr>
+                        <th>Name Of Programming Language</th>
+                        <th>Thoughts on it</th>
+                    </tr>
+
+                    <tr>
+                        <td>Python</td>
+                        <td>Finished a course about more than two months ago and really like it</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Am currently learning and don't like it that much</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Same as HTML, But you can do a lot of stuff with it so kinda cool</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Am excited to learn (Haven't started yet)</td>
+                    </tr>
+                </table>
+            </div>
+            <hr style="margin-top:30px;color:white;">
+            <div style="padding-top:5px;">
+                <p>That's mostly it for me. Bye. (btw I also broke my right hand twice)</p>
+            </div>
+            <a class="mail_me" href="mailto:ahmedmashroor123@gmail.com" style="font-size:25px;color:green">Reach me (Gmail)</a>
+        </div>
+    </div>
+</body>
+</html>
